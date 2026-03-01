@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RCC Institute of Computer Education – Authorized Learning Centre from Haryana State Corp. Ltd. Located near Govt. Model School, Preet Nagar, Barara, Haryana 133201. Rated 4.8★ on Google. Offering programming, accounting, design, and digital marketing courses." />
+  <meta name="keywords" content="RCC Institute, Computer Education, Barara, Ambala, HKCL, Haryana State Corp, Tally, Python, Digital Marketing, Computer Courses, Preet Nagar, Sharaqpur" />
+  <meta name="author" content="RCC Institute of Computer Education" />
+  <title>RCC Institute of Computer Education | Auth. Learning Centre | Barara, Haryana</title>
+
+  <!-- ========== Favicon ========== -->
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+
+  <!-- ========== Bootstrap 5 CSS CDN ========== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+   crossorigin="anonymous" />
+
+  <!-- ========== Font Awesome 6 CDN (Icons) ========== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- ========== Google Fonts ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- ========== AOS (Animate On Scroll) CDN ========== -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- ========================================================
+       CUSTOM CSS – Dark-Blue & Gold/Yellow Color Scheme
+       ======================================================== -->
+  <style>
+    /* ────────────────────────────────────
+       CSS Custom Properties (Variables)
+    ──────────────────────────────────── */
+    :root {
+      --clr-primary:     #0a1628;
+      --clr-primary-alt: #101e36;
+      --clr-secondary:   #132444;
+      --clr-accent:      #d4a843;
+      --clr-accent-alt:  #f0c75e;
+      --clr-cyan:        #00d4ff;
+      --clr-white:       #ffffff;
+      --clr-light:       #c8d6e5;
+      --clr-body-text:   #a4b4c9;
+      --ff-heading:      'Playfair Display', serif;
+      --ff-body:         'Inter', sans-serif;
+      --transition:      all 0.35s ease;
+    }
+
+    /* ────────────────────────────────────
+       Global Reset & Base Styles
+    ──────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      margin: 0; padding: 0;
+      font-family: var(--ff-body);
+      background-color: var(--clr-primary);
+      color: var(--clr-body-text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--ff-heading);
+      color: var(--clr-white);
+    }
+
+    a { text-decoration: none; }
+    img { max-width: 100%; height: auto; }
+
+    /* ── Section Utilities ── */
+    .section-padding { padding: 100px 0; }
+
+    .section-title {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-cyan));
+      border-radius: 2px;
+      margin-top: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--clr-light);
+      max-width: 620px;
+    }
+
+    .bg-alt { background-color: var(--clr-secondary); }
+    .text-accent { color: var(--clr-accent) !important; }
+
+    /* ── Buttons ── */
+    .btn-gold {
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-alt));
+      color: var(--clr-primary);
+      font-weight: 700;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 50px;
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.95rem;
+    }
+
+    .btn-gold:hover {
+      background: linear-gradient(135deg, var(--clr-accent-alt), var(--clr-accent));
+      color: var(--clr-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(212, 168, 67, 0.35);
+    }
+
+    .btn-outline-gold {
+      border: 2px solid var(--clr-accent);
+      color: var(--clr-accent);
+      font-weight: 600;
+      padding: 12px 32px;
+      border-radius: 50px;
+      background: transparent;
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.95rem;
+    }
+
+    .btn-outline-gold:hover {
+      background: var(--clr-accent);
+      color: var(--clr-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(212, 168, 67, 0.25);
+    }
+
+    /* ────────────────────────────────────
+       1. NAVBAR
+    ──────────────────────────────────── */
+    .navbar-custom {
+      background: rgba(10, 22, 40, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(212, 168, 67, 0.12);
+      padding: 12px 0;
+      transition: var(--transition);
+    }
+
+    .navbar-custom.scrolled {
+      padding: 8px 0;
+      background: rgba(10, 22, 40, 0.98);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .navbar-brand-custom {
+      font-family: var(--ff-heading);
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--clr-white) !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-brand-custom img {
+      height: 42px; width: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--clr-accent);
+    }
+
+    .navbar-brand-custom span { color: var(--clr-accent); }
+
+    .navbar-custom .nav-link {
+      color: var(--clr-light) !important;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 8px 18px !important;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .navbar-custom .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 2px; left: 18px;
+      width: 0; height: 2px;
+      background: var(--clr-accent);
+      transition: width 0.3s ease;
+    }
+
+    .navbar-custom .nav-link:hover::after,
+    .navbar-custom .nav-link.active::after { width: calc(100% - 36px); }
+
+    .navbar-custom .nav-link:hover,
+    .navbar-custom .nav-link.active { color: var(--clr-white) !important; }
+
+    .navbar-toggler { border-color: rgba(212, 168, 67, 0.4) !important; }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(212, 168, 67, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    /* ────────────────────────────────────
+       2. HERO SECTION
+    ──────────────────────────────────── */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      /* Real photo background overlay */
+      background: linear-gradient(175deg, rgba(10,22,40,0.92) 0%, rgba(19,36,68,0.88) 50%, rgba(10,22,40,0.95) 100%),
+                  url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=80') center/cover no-repeat;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(212, 168, 67, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulseGlow 6s ease-in-out infinite;
+    }
+
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulseGlow 8s ease-in-out infinite reverse;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50%      { transform: scale(1.15); opacity: 1; }
+    }
+
+    .hero-content { position: relative; z-index: 2; }
+
+    .hero-logo {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--clr-accent);
+      box-shadow: 0 0 40px rgba(212, 168, 67, 0.25);
+      margin-bottom: 28px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(212, 168, 67, 0.12);
+      border: 1px solid rgba(212, 168, 67, 0.3);
+      color: var(--clr-accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 6px 22px;
+      border-radius: 50px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-headline {
+      font-size: 3.6rem;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: var(--clr-white);
+    }
+
+    .hero-headline .highlight {
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-alt));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subheadline {
+      font-size: 1.2rem;
+      color: var(--clr-light);
+      max-width: 700px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .hero-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 28px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      color: var(--clr-light);
+    }
+
+    .hero-rating .stars { color: var(--clr-accent); }
+
+    @media (max-width: 768px) {
+      .hero-headline { font-size: 2.2rem; }
+      .hero-subheadline { font-size: 1rem; }
+      .hero-logo { width: 100px; height: 100px; }
+    }
+
+    /* ────────────────────────────────────
+       STATS COUNTER SECTION
+    ──────────────────────────────────── */
+    .stats-section {
+      padding: 60px 0;
+      background: linear-gradient(135deg, var(--clr-secondary) 0%, var(--clr-primary-alt) 100%);
+      border-top: 1px solid rgba(212, 168, 67, 0.08);
+      border-bottom: 1px solid rgba(212, 168, 67, 0.08);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .stat-number {
+      font-family: var(--ff-heading);
+      font-size: 3rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-alt));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.92rem;
+      color: var(--clr-light);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .stat-item i {
+      font-size: 1.6rem;
+      color: var(--clr-accent);
+      margin-bottom: 10px;
+      opacity: 0.7;
+    }
+
+    /* ────────────────────────────────────
+       3. ABOUT US SECTION
+    ──────────────────────────────────── */
+    .about-img-wrapper {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      min-height: 420px;
+      border: 1px solid rgba(212, 168, 67, 0.15);
+    }
+
+    .about-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 420px;
+    }
+
+    .about-img-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 20px 24px;
+      background: linear-gradient(transparent, rgba(10,22,40,0.9));
+    }
+
+    .about-img-overlay p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--clr-light);
+    }
+
+    .about-text p { font-size: 1.05rem; line-height: 1.85; }
+
+    .about-detail-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+    }
+
+    .about-detail-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      font-size: 0.95rem;
+      color: var(--clr-light);
+    }
+
+    .about-detail-list li i {
+      color: var(--clr-accent);
+      font-size: 1rem;
+      width: 20px;
+      text-align: center;
+    }
+
+    .hkcl-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(212, 168, 67, 0.08);
+      border: 1px solid rgba(212, 168, 67, 0.25);
+      border-radius: 12px;
+      padding: 16px 24px;
+      margin-top: 20px;
+      transition: var(--transition);
+    }
+
+    .hkcl-badge:hover {
+      background: rgba(212, 168, 67, 0.14);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212, 168, 67, 0.12);
+    }
+
+    .hkcl-badge i { font-size: 2.2rem; color: var(--clr-accent); }
+
+    .hkcl-badge .hkcl-text {
+      font-size: 0.95rem;
+      color: var(--clr-light);
+      line-height: 1.5;
+    }
+
+    .hkcl-badge .hkcl-text strong {
+      color: var(--clr-accent);
+      display: block;
+      font-size: 1rem;
+    }
+
+    /* ────────────────────────────────────
+       4. HIGHLIGHTS / FEATURE CARDS
+    ──────────────────────────────────── */
+    .highlight-card {
+      background: linear-gradient(145deg, var(--clr-primary-alt), var(--clr-secondary));
+      border: 1px solid rgba(212, 168, 67, 0.1);
+      border-radius: 16px;
+      padding: 40px 28px;
+      text-align: center;
+      transition: var(--transition);
+      height: 100%;
+    }
+
+    .highlight-card:hover {
+      border-color: rgba(212, 168, 67, 0.35);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .highlight-icon {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.7rem;
+      background: linear-gradient(135deg, rgba(212, 168, 67, 0.15), rgba(0, 212, 255, 0.08));
+      color: var(--clr-accent);
+      transition: var(--transition);
+    }
+
+    .highlight-card:hover .highlight-icon {
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-alt));
+      color: var(--clr-primary);
+      transform: scale(1.1);
+    }
+
+    .highlight-card h5 {
+      font-family: var(--ff-body);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .highlight-card p {
+      font-size: 0.9rem;
+      color: var(--clr-body-text);
+      margin-bottom: 0;
+    }
+
+    /* ────────────────────────────────────
+       5. COURSES SECTION
+    ──────────────────────────────────── */
+    .course-card {
+      background: linear-gradient(145deg, var(--clr-primary-alt), var(--clr-secondary));
+      border: 1px solid rgba(212, 168, 67, 0.1);
+      border-radius: 16px;
+      padding: 36px 30px;
+      transition: var(--transition);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .course-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-cyan));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .course-card:hover::before { transform: scaleX(1); }
+
+    .course-card:hover {
+      border-color: rgba(212, 168, 67, 0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .course-icon {
+      width: 58px; height: 58px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: rgba(212, 168, 67, 0.1);
+      color: var(--clr-accent);
+      margin-bottom: 18px;
+      transition: var(--transition);
+    }
+
+    .course-card:hover .course-icon {
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-alt));
+      color: var(--clr-primary);
+    }
+
+    .course-card h4 {
+      font-family: var(--ff-body);
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+      color: var(--clr-white);
+    }
+
+    .course-card ul { list-style: none; padding: 0; margin: 0; }
+
+    .course-card ul li {
+      padding: 7px 0;
+      font-size: 0.95rem;
+      color: var(--clr-body-text);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .course-card ul li:last-child { border-bottom: none; }
+    .course-card ul li i { color: var(--clr-accent); font-size: 0.7rem; }
+
+    /* ── Course Image Headers ── */
+    .course-card-img {
+      border-radius: 12px;
+      overflow: hidden;
+      margin: -36px -30px 22px;
+      height: 160px;
+    }
+
+    .course-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .course-card:hover .course-card-img img { transform: scale(1.08); }
+
+    /* ────────────────────────────────────
+       GALLERY SECTION
+    ──────────────────────────────────── */
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(212, 168, 67, 0.1);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .gallery-item:hover {
+      border-color: rgba(212, 168, 67, 0.35);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 16px 20px;
+      background: linear-gradient(transparent, rgba(10,22,40,0.85));
+      color: var(--clr-white);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* ────────────────────────────────────
+       TESTIMONIALS SECTION
+    ──────────────────────────────────── */
+    .testimonial-card {
+      background: linear-gradient(145deg, var(--clr-primary-alt), var(--clr-secondary));
+      border: 1px solid rgba(212, 168, 67, 0.1);
+      border-radius: 16px;
+      padding: 32px 28px;
+      height: 100%;
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover {
+      border-color: rgba(212, 168, 67, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .testimonial-card .quote-icon {
+      font-size: 2rem;
+      color: var(--clr-accent);
+      opacity: 0.4;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--clr-accent);
+    }
+
+    .testimonial-author h6 {
+      font-family: var(--ff-body);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    .testimonial-author small {
+      font-size: 0.78rem;
+      color: var(--clr-body-text);
+    }
+
+    .testimonial-stars {
+      color: var(--clr-accent);
+      font-size: 0.78rem;
+      margin-bottom: 10px;
+    }
+
+    /* ────────────────────────────────────
+       6. CONTACT SECTION
+    ──────────────────────────────────── */
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .contact-info-icon {
+      width: 48px; height: 48px; min-width: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: rgba(212, 168, 67, 0.1);
+      color: var(--clr-accent);
+    }
+
+    .contact-info-item h6 {
+      font-family: var(--ff-body);
+      font-weight: 600;
+      margin-bottom: 2px;
+      font-size: 0.95rem;
+    }
+
+    .contact-info-item p {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      color: var(--clr-body-text);
+    }
+
+    .contact-info-item a {
+      color: var(--clr-accent);
+      transition: var(--transition);
+    }
+
+    .contact-info-item a:hover { color: var(--clr-accent-alt); }
+
+    .map-wrapper {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 168, 67, 0.12);
+      margin-top: 16px;
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 260px;
+      border: 0;
+      filter: brightness(0.8) contrast(1.1) saturate(0.3);
+      transition: filter 0.4s ease;
+    }
+
+    .map-wrapper:hover iframe { filter: brightness(1) contrast(1) saturate(1); }
+
+    .contact-form-wrapper {
+      background: linear-gradient(145deg, var(--clr-primary-alt), var(--clr-secondary));
+      border: 1px solid rgba(212, 168, 67, 0.1);
+      border-radius: 16px;
+      padding: 40px 36px;
+    }
+
+    .contact-form-wrapper h4 {
+      font-family: var(--ff-body);
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .form-control-custom {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: var(--clr-white);
+      padding: 14px 18px;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .form-control-custom::placeholder { color: rgba(164, 180, 201, 0.5); }
+
+    .form-control-custom:focus {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--clr-accent);
+      box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.12);
+      color: var(--clr-white);
+    }
+
+    .form-label-custom {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--clr-light);
+      margin-bottom: 6px;
+    }
+
+    /* ────────────────────────────────────
+       7. FOOTER
+    ──────────────────────────────────── */
+    .footer {
+      background: var(--clr-primary);
+      border-top: 1px solid rgba(212, 168, 67, 0.1);
+      padding: 50px 0 30px;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--clr-body-text);
+    }
+
+    .footer .credits {
+      font-size: 0.8rem;
+      color: rgba(164, 180, 201, 0.5);
+      margin-top: 6px;
+    }
+
+    .footer .credits a {
+      color: var(--clr-accent);
+      transition: var(--transition);
+    }
+
+    .footer .credits a:hover { color: var(--clr-accent-alt); }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li a {
+      color: var(--clr-body-text);
+      font-size: 0.9rem;
+      padding: 4px 0;
+      display: inline-block;
+      transition: var(--transition);
+    }
+
+    .footer-links li a:hover { color: var(--clr-accent); }
+
+    .footer h6 {
+      font-family: var(--ff-body);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(212, 168, 67, 0.1);
+      color: var(--clr-accent);
+      margin-right: 8px;
+      transition: var(--transition);
+    }
+
+    .footer-social a:hover {
+      background: var(--clr-accent);
+      color: var(--clr-primary);
+      transform: translateY(-2px);
+    }
+
+    /* ── Scroll-to-Top ── */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 30px; right: 30px;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-alt));
+      color: var(--clr-primary);
+      border: none;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0; visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(212, 168, 67, 0.35);
+    }
+
+    .scroll-top-btn.visible { opacity: 1; visibility: visible; }
+    .scroll-top-btn:hover { transform: translateY(-3px); }
+
+    /* ── WhatsApp Float ── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 90px; right: 30px;
+      width: 54px; height: 54px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #fff;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      color: #fff;
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+    }
+
+    /* ── Preloader ── */
+    .preloader {
+      position: fixed; inset: 0;
+      background: var(--clr-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .preloader.hidden { opacity: 0; visibility: hidden; }
+
+    .preloader-spinner {
+      width: 50px; height: 50px;
+      border: 4px solid rgba(212, 168, 67, 0.15);
+      border-top-color: var(--clr-accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       PRELOADER
+  ============================================================= -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner"></div>
+  </div>
+
+  <!-- ============================================================
+       1. NAVBAR
+  ============================================================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-custom" href="#hero">
+        <img src="assets/images/logo.png" alt="RCC Institute Logo" />
+        RCC <span>Institute</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-gold" href="#contact">
+              <i class="fas fa-play-circle me-1"></i> Join Free Demo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       2. HERO SECTION (with background image)
+  ============================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-content">
+      <img src="assets/images/logo.png" alt="RCC Institute of Computer Education" class="hero-logo" data-aos="zoom-in" data-aos-duration="800" />
+
+      <div data-aos="fade-down" data-aos-delay="200">
+        <span class="hero-badge"><i class="fas fa-award me-1"></i> Auth. Learning Centre &bull; Haryana State Corp. Ltd. &bull; Est. 2002</span>
+      </div>
+
+      <h1 class="hero-headline" data-aos="fade-up" data-aos-delay="300">
+        Empowering Futures Through<br />
+        <span class="highlight">Computer Education</span>
+      </h1>
+
+      <p class="hero-subheadline" data-aos="fade-up" data-aos-delay="400">
+        Barara's most trusted &amp; highest-rated institute for job-oriented computer training.
+        Authorized Learning Centre from <strong>Haryana State Corporation Ltd.</strong>
+        — offering government-recognized certifications in programming, accounting, design &amp; digital skills.
+      </p>
+
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
+        <a href="#courses" class="btn btn-gold">
+          <i class="fas fa-graduation-cap me-2"></i>View Courses
+        </a>
+        <a href="#contact" class="btn btn-outline-gold">
+          <i class="fas fa-envelope me-2"></i>Contact Us
+        </a>
+      </div>
+
+      <!-- Google Rating Badge -->
+      <div data-aos="fade-up" data-aos-delay="600">
+        <div class="hero-rating mt-4">
+          <span class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </span>
+          <strong style="color: var(--clr-accent)">4.8</strong> Rating on Google &nbsp;|&nbsp;
+          <i class="fas fa-map-marker-alt text-accent"></i> Preet Nagar, Barara
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS COUNTER SECTION
+  ============================================================= -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-item">
+            <i class="fas fa-calendar-alt d-block"></i>
+            <div class="stat-number">24+</div>
+            <div class="stat-label">Years of Excellence</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-item">
+            <i class="fas fa-user-graduate d-block"></i>
+            <div class="stat-number">5000+</div>
+            <div class="stat-label">Students Trained</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-item">
+            <i class="fas fa-star d-block"></i>
+            <div class="stat-number">4.8★</div>
+            <div class="stat-label">Google Rating</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-item">
+            <i class="fas fa-book d-block"></i>
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Professional Courses</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. ABOUT US SECTION (with real data & image)
+  ============================================================= -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Left Column: Text -->
+        <div class="col-lg-7" data-aos="fade-right">
+          <span class="hero-badge mb-3"><i class="fas fa-info-circle me-1"></i> About Us</span>
+          <h2 class="section-title">Authorized Learning Centre<br />Since 2002</h2>
+          <div class="about-text mt-4">
+            <p>
+              <strong class="text-accent">RCC Institute of Computer Education</strong> is a premier,
+              government-authorized computer training center located <strong>near Govt. Model School,
+              Preet Nagar, Barara, Sharaqpur, Haryana 133201</strong>. Since our establishment in 2002,
+              we have been committed to delivering quality, job-oriented education that empowers students
+              to thrive in today's technology-driven world.
+            </p>
+            <p>
+              As an <strong class="text-accent">Authorized Learning Centre from Haryana State Corporation Ltd.</strong>,
+              our certifications carry government recognition — giving our students a genuine competitive edge
+              in the job market. Our mission is to bridge the gap between education and employment by providing
+              practical, industry-relevant training across computers, programming, accounting, design, and
+              digital skills.
+            </p>
+            <p>
+              Our courses are designed and taught by <strong>experienced faculty members</strong> who bring
+              real-world expertise into the classroom. With modern lab infrastructure, a hands-on teaching
+              approach, and personalized attention for every student — from first-time learners to aspiring
+              professionals — we prepare students not just for exams, but for <strong>successful careers</strong>.
+            </p>
+
+            <!-- Key Details from Google Maps -->
+            <ul class="about-detail-list">
+              <li><i class="fas fa-map-pin"></i> Near Govt. Model School, Preet Nagar, Barara, Haryana 133201</li>
+              <li><i class="fas fa-clock"></i> Morning Session: 8:00 AM – 7:30 PM &nbsp;|&nbsp; Evening Session: 8:30 PM onwards</li>
+              <li><i class="fas fa-star"></i> Rated <strong class="text-accent">4.8 out of 5</strong> on Google Maps</li>
+              <li><i class="fas fa-phone"></i> <a href="tel:+919416327087" class="text-accent">+91 94163 27087</a></li>
+            </ul>
+
+            <!-- HKCL Affiliation Badge (CRITICAL) -->
+            <a href="https://hkcl.in/" target="_blank" rel="noopener noreferrer" class="hkcl-badge" title="Visit HKCL Website">
+              <i class="fas fa-certificate"></i>
+              <div class="hkcl-text">
+                <strong>Affiliated with HKCL</strong>
+                We are proudly affiliated with <strong style="display:inline; color:var(--clr-accent-alt);">Haryana Knowledge Corporation Limited (HKCL)</strong>,
+                providing government-recognized certifications.
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Institute Photo from Google Maps -->
+        <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+          <div class="about-img-wrapper">
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepnYGPu17iFoi7yV5vBveO16ej6xObMkaAzeYRiU3aRsGP0xWqz9iteBR5aSSRuePEmy_RYEEcep9fJA8t67NAPu13Rw71RAWfMbIr3neTZjoHWbUrSsN62r53Zd_fgc6kPA3OBHZ3syuM=w800-h600-k-no"
+              alt="RCC Institute of Computer Education Building - Preet Nagar, Barara"
+              loading="lazy" />
+            <div class="about-img-overlay">
+              <p><i class="fas fa-map-marker-alt text-accent me-1"></i> RCC Institute, Preet Nagar, Barara — Rated 4.8★ on Google</p>
+            </div>
+          </div>
+
+          <!-- Second image: Classroom vibe -->
+          <div class="about-img-wrapper mt-4" style="min-height: 200px;">
+            <img
+              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80"
+              alt="Students learning in a modern computer lab"
+              loading="lazy" />
+            <div class="about-img-overlay">
+              <p><i class="fas fa-users text-accent me-1"></i> Hands-on training in modern computer labs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. HIGHLIGHTS / FEATURE CARDS
+  ============================================================= -->
+  <section class="section-padding bg-alt" id="highlights">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="hero-badge"><i class="fas fa-star me-1"></i> Why Choose Us</span>
+        <h2 class="section-title mx-auto mt-3">Our Core Strengths</h2>
+        <p class="section-subtitle mx-auto mt-3">
+          Discover why hundreds of students and professionals in Barara and across Ambala trust RCC Institute for their career growth.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-landmark"></i></div>
+            <h5>Govt. Authorized Centre</h5>
+            <p>Authorized Learning Centre from Haryana State Corp. Ltd. (HKCL) — your certifications carry real weight.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-briefcase"></i></div>
+            <h5>Job Oriented Training</h5>
+            <p>Industry-relevant curriculum built with employer expectations in mind. Get job-ready skills from day one.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <h5>Experienced Faculty</h5>
+            <p>Learn from seasoned professionals with years of teaching and real-world industry experience.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-gift"></i></div>
+            <h5>Free Demo Class</h5>
+            <p>Try before you commit! Walk in for a free demo class and experience our teaching quality first-hand.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. COURSES SECTION (with images on cards)
+  ============================================================= -->
+  <section class="section-padding" id="courses">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="hero-badge"><i class="fas fa-book-open me-1"></i> Our Programs</span>
+        <h2 class="section-title mx-auto mt-3">Courses We Offer</h2>
+        <p class="section-subtitle mx-auto mt-3">
+          From foundational computer skills to advanced professional certifications — explore our comprehensive course catalog.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Category 1: Fundamentals & Languages -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="course-card">
+            <div class="course-card-img">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80" alt="Computer fundamentals and office training" loading="lazy" />
+            </div>
+            <div class="course-icon"><i class="fas fa-laptop-code"></i></div>
+            <h4>Fundamentals &amp; Languages</h4>
+            <ul>
+              <li><i class="fas fa-chevron-right"></i> Basic Computer Operations</li>
+              <li><i class="fas fa-chevron-right"></i> MS Office (Word, Excel, PowerPoint)</li>
+              <li><i class="fas fa-chevron-right"></i> English Speaking Course</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Category 2: Programming -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="course-card">
+            <div class="course-card-img">
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80" alt="Programming courses - Python, C++, VB" loading="lazy" />
+            </div>
+            <div class="course-icon"><i class="fas fa-code"></i></div>
+            <h4>Programming</h4>
+            <ul>
+              <li><i class="fas fa-chevron-right"></i> C++ Programming</li>
+              <li><i class="fas fa-chevron-right"></i> Visual Basic (VB)</li>
+              <li><i class="fas fa-chevron-right"></i> Python Programming</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Category 3: Accounting -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="course-card">
+            <div class="course-card-img">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Tally accounting and GST training" loading="lazy" />
+            </div>
+            <div class="course-icon"><i class="fas fa-calculator"></i></div>
+            <h4>Accounting</h4>
+            <ul>
+              <li><i class="fas fa-chevron-right"></i> Tally with GST</li>
+              <li><i class="fas fa-chevron-right"></i> Advanced Financial Accounting</li>
+              <li><i class="fas fa-chevron-right"></i> Payroll Management</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Category 4: Design & CAD -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="course-card">
+            <div class="course-card-img">
+              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80" alt="Graphic design and CAD training" loading="lazy" />
+            </div>
+            <div class="course-icon"><i class="fas fa-paint-brush"></i></div>
+            <h4>Design &amp; CAD</h4>
+            <ul>
+              <li><i class="fas fa-chevron-right"></i> Graphics Design (PS, CDR, AI)</li>
+              <li><i class="fas fa-chevron-right"></i> AutoCAD</li>
+              <li><i class="fas fa-chevron-right"></i> SolidWorks</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Category 5: Digital & Security -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="course-card">
+            <div class="course-card-img">
+              <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80" alt="Digital marketing and cyber security" loading="lazy" />
+            </div>
+            <div class="course-icon"><i class="fas fa-globe"></i></div>
+            <h4>Digital &amp; Security</h4>
+            <ul>
+              <li><i class="fas fa-chevron-right"></i> Digital Marketing (SEO, SEM, SMM)</li>
+              <li><i class="fas fa-chevron-right"></i> Cyber Security Fundamentals</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CTA Card -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="course-card d-flex flex-column align-items-center justify-content-center text-center" style="background: linear-gradient(145deg, rgba(212,168,67,0.08), rgba(0,212,255,0.04));">
+            <div class="course-icon" style="background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-alt)); color: var(--clr-primary); width: 68px; height: 68px; font-size: 1.7rem;">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h4 class="mt-2">Not Sure What to Pick?</h4>
+            <p class="text-center mb-3" style="font-size: 0.95rem;">
+              Talk to our counselors for free guidance on the best course for your career goals.
+            </p>
+            <a href="tel:+919416327087" class="btn btn-gold btn-sm mb-2">
+              <i class="fas fa-phone me-1"></i> Call: +91 94163 27087
+            </a>
+            <a href="#contact" class="btn btn-outline-gold btn-sm">Get Free Counseling</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY / CAMPUS SECTION
+  ============================================================= -->
+  <section class="section-padding bg-alt" id="gallery">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="hero-badge"><i class="fas fa-images me-1"></i> Our Campus</span>
+        <h2 class="section-title mx-auto mt-3">Life at RCC Institute</h2>
+        <p class="section-subtitle mx-auto mt-3">
+          Take a peek into our campus, computer labs, and the learning environment that shapes future professionals.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Gallery Item 1: Institute Building (from Google Maps) -->
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="gallery-item">
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepnYGPu17iFoi7yV5vBveO16ej6xObMkaAzeYRiU3aRsGP0xWqz9iteBR5aSSRuePEmy_RYEEcep9fJA8t67NAPu13Rw71RAWfMbIr3neTZjoHWbUrSsN62r53Zd_fgc6kPA3OBHZ3syuM=w800-h400-k-no"
+              alt="RCC Institute Building, Preet Nagar, Barara"
+              loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-building me-1"></i> Our Institute — Preet Nagar, Barara
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2: Computer Lab -->
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=800&q=80"
+              alt="Modern computer lab with students"
+              loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-desktop me-1"></i> Modern Computer Labs
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3: Classroom -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80"
+              alt="Interactive classroom sessions"
+              loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-chalkboard me-1"></i> Interactive Classrooms
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4: Students Coding -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80"
+              alt="Students collaborating on projects"
+              loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-users me-1"></i> Collaborative Learning
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5: Certificates -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=600&q=80"
+              alt="Students receiving certificates"
+              loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-certificate me-1"></i> Government-Recognized Certifications
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS SECTION
+  ============================================================= -->
+  <section class="section-padding" id="testimonials">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="hero-badge"><i class="fas fa-quote-left me-1"></i> Student Voices</span>
+        <h2 class="section-title mx-auto mt-3">What Our Students Say</h2>
+        <p class="section-subtitle mx-auto mt-3">
+          Don't just take our word for it — hear from students who transformed their careers at RCC Institute.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"I completed my Tally with GST course from RCC Institute and got placed within a month. The faculty explained every concept so clearly — even complex GST entries became easy to understand."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Student" class="testimonial-avatar" />
+              <div>
+                <h6>Rahul Sharma</h6>
+                <small>Tally with GST Graduate</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"The Python programming course was amazing! Sir teaches with real examples and projects. The HKCL certificate helped me get into a great company. Best institute in Barara without doubt."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Student" class="testimonial-avatar" />
+              <div>
+                <h6>Priya Gupta</h6>
+                <small>Python Programming Graduate</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>"I came knowing nothing about computers. Today I'm working as a graphic designer — all thanks to RCC Institute. The Graphics Design course with Photoshop, CorelDRAW and Illustrator was very practical."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Student" class="testimonial-avatar" />
+              <div>
+                <h6>Amit Verma</h6>
+                <small>Graphic Design Graduate</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. CONTACT SECTION (with real Google Maps data)
+  ============================================================= -->
+  <section class="section-padding bg-alt" id="contact">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="hero-badge"><i class="fas fa-paper-plane me-1"></i> Get In Touch</span>
+        <h2 class="section-title mx-auto mt-3">Contact Us</h2>
+        <p class="section-subtitle mx-auto mt-3">
+          Have questions? Ready to enroll? Visit us near Govt. Model School in Barara or reach out below!
+        </p>
+      </div>
+
+      <div class="row g-5">
+        <!-- Left Column: Contact Info + Map -->
+        <div class="col-lg-5" data-aos="fade-right">
+          <!-- Address -->
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h6>Our Address</h6>
+              <p>RCC Institute of Computer Education,<br />
+                Near Govt. Model School, Preet Nagar,<br />
+                Barara, Sharaqpur, Haryana 133201</p>
+            </div>
+          </div>
+
+          <!-- Phone / WhatsApp -->
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <h6>Phone / WhatsApp</h6>
+              <p><a href="tel:+919416327087">+91 94163 27087</a></p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h6>Email</h6>
+              <p><a href="mailto:contact@rccbarara.com">contact@rccbarara.com</a></p>
+            </div>
+          </div>
+
+          <!-- Operating Hours -->
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h6>Operating Hours</h6>
+              <p>Morning Session: 8:00 AM – 7:30 PM<br />
+                Evening Session: 8:30 PM onwards<br />
+                <small class="text-accent">Open Monday to Saturday</small></p>
+            </div>
+          </div>
+
+          <!-- Google Maps Link -->
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-directions"></i></div>
+            <div>
+              <h6>Get Directions</h6>
+              <p>
+                <a href="https://maps.app.goo.gl/AMAegJebsdCs4UAP9" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-google me-1"></i> Open in Google Maps <i class="fas fa-external-link-alt ms-1" style="font-size:0.75rem;"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Google Maps Embed with REAL coordinates -->
+          <div class="map-wrapper" data-aos="fade-up" data-aos-delay="200">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.5!2d77.0410744!3d30.2160289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e53b6eeac940b%3A0x4761bc2df1918e14!2sRCC%20Institute%20of%20Computer%20Education%20(Auth.%20Learning%20Centre%20from%20Haryana%20State%20Corp.%20Ltd.)!5e0!3m2!1sen!2sin!4v1700000000000"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="RCC Institute Location - Near Govt. Model School, Preet Nagar, Barara">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+          <div class="contact-form-wrapper">
+            <h4><i class="fas fa-edit text-accent me-2"></i>Send Us a Message</h4>
+            <p class="mb-4" style="font-size: 0.92rem;">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+            <!--
+              NOTE: This is a static site. The form action uses Formspree as a placeholder.
+              To activate: 1) Go to https://formspree.io  2) Create a free account
+              3) Create a new form  4) Replace "your_endpoint_here" with your Formspree form ID.
+            -->
+            <form action="https://formspree.io/f/your_endpoint_here" method="POST" id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="formName" class="form-label form-label-custom">Full Name <span class="text-accent">*</span></label>
+                  <input type="text" class="form-control form-control-custom" id="formName" name="name" placeholder="Enter your full name" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="formEmail" class="form-label form-label-custom">Email Address <span class="text-accent">*</span></label>
+                  <input type="email" class="form-control form-control-custom" id="formEmail" name="email" placeholder="Enter your email" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="formPhone" class="form-label form-label-custom">Phone Number</label>
+                  <input type="tel" class="form-control form-control-custom" id="formPhone" name="phone" placeholder="Enter your phone number" />
+                </div>
+                <div class="col-md-6">
+                  <label for="formCourse" class="form-label form-label-custom">Interested Course</label>
+                  <select class="form-control form-control-custom" id="formCourse" name="course">
+                    <option value="">Select a course...</option>
+                    <option value="Basic Computer">Basic Computer Operations</option>
+                    <option value="MS Office">MS Office</option>
+                    <option value="English Speaking">English Speaking</option>
+                    <option value="C++">C++ Programming</option>
+                    <option value="Visual Basic">Visual Basic (VB)</option>
+                    <option value="Python">Python Programming</option>
+                    <option value="Tally GST">Tally with GST</option>
+                    <option value="Financial Accounting">Advanced Financial Accounting</option>
+                    <option value="Payroll">Payroll Management</option>
+                    <option value="Graphic Design">Graphic Design (PS, CDR, AI)</option>
+                    <option value="AutoCAD">AutoCAD / SolidWorks</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                    <option value="Other">Other / Not Sure</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="formMessage" class="form-label form-label-custom">Message <span class="text-accent">*</span></label>
+                  <textarea class="form-control form-control-custom" id="formMessage" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+                <div class="col-12 mt-2">
+                  <button type="submit" class="btn btn-gold w-100">
+                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. FOOTER (Enhanced with columns)
+  ============================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <!-- Footer Col 1: About -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="assets/images/logo.png" alt="RCC Logo" style="width:36px;height:36px;border-radius:50%;border:2px solid var(--clr-accent);object-fit:cover;" />
+            <h6 class="mb-0" style="font-family:var(--ff-heading);">RCC <span class="text-accent">Institute</span></h6>
+          </div>
+          <p style="font-size:0.88rem;">
+            Authorized Learning Centre from Haryana State Corp. Ltd. Empowering students in Barara with quality computer education since 2002.
+          </p>
+          <div class="footer-social">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/919416327087" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Footer Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Col 3: Popular Courses -->
+        <div class="col-lg-3 col-md-6">
+          <h6>Popular Courses</h6>
+          <ul class="footer-links">
+            <li><a href="#courses">Tally with GST</a></li>
+            <li><a href="#courses">Python Programming</a></li>
+            <li><a href="#courses">Graphic Design</a></li>
+            <li><a href="#courses">Digital Marketing</a></li>
+            <li><a href="#courses">MS Office</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Col 4: Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h6>Contact Info</h6>
+          <ul class="footer-links">
+            <li><a href="https://maps.app.goo.gl/AMAegJebsdCs4UAP9" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt text-accent me-2"></i>Preet Nagar, Barara 133201</a></li>
+            <li><a href="tel:+919416327087"><i class="fas fa-phone text-accent me-2"></i>+91 94163 27087</a></li>
+            <li><a href="mailto:contact@rccbarara.com"><i class="fas fa-envelope text-accent me-2"></i>contact@rccbarara.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="border-color: rgba(212,168,67,0.1);" />
+      <div class="text-center mt-3">
+        <p>&copy; 2026 RCC Institute of Computer Education. All rights reserved.</p>
+        <p class="credits">
+          Website designed with <i class="fas fa-heart text-accent"></i> by
+          <a href="#">RCC Digital Team</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+  ============================================================= -->
+  <a href="https://wa.me/919416327087?text=Hi%20RCC%20Institute%2C%20I%20would%20like%20to%20know%20more%20about%20your%20courses."
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ============================================================
+       SCROLL TO TOP BUTTON
+  ============================================================= -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Back to Top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ========== Bootstrap 5 JS Bundle (Popper included) ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- ========== AOS (Animate On Scroll) JS ========== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- ========== Custom JavaScript ========== -->
+  <script>
+    // ── Initialize AOS animations ──
+    AOS.init({
+      duration: 700,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+
+    // ── Preloader: hide after page load ──
+    window.addEventListener('load', function () {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.classList.add('hidden');
+        setTimeout(() => preloader.remove(), 600);
+      }
+    });
+
+    // ── Navbar: shrink on scroll + active link ──
+    const navbar = document.getElementById('mainNavbar');
+    const navLinks = document.querySelectorAll('.navbar-custom .nav-link');
+    const sections = document.querySelectorAll('section[id]');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', function () {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      if (scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+
+      let currentSection = '';
+      sections.forEach(function (section) {
+        const sectionTop = section.offsetTop - 120;
+        if (scrollY >= sectionTop) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(function (link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSection) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // ── Scroll to top ──
+    scrollTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ── Close mobile nav on link click ──
+    const navbarCollapse = document.getElementById('navbarNav');
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (navbarCollapse.classList.contains('show')) {
+          new bootstrap.Collapse(navbarCollapse).hide();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
